@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Class_Login.cs" />
+    <Compile Include="Clases\Class_Proyectos.cs" />
     <Compile Include="Clases\Conexion_DB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -117,6 +118,24 @@
     </Compile>
     <Compile Include="Formularios\RecursosHumanos.Designer.cs">
       <DependentUpon>RecursosHumanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\RH\Actualizar_Proyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RH\Actualizar_Proyecto.Designer.cs">
+      <DependentUpon>Actualizar_Proyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\RH\Agregar_Proyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RH\Agregar_Proyecto.Designer.cs">
+      <DependentUpon>Agregar_Proyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\RH\Borrar_Proyecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RH\Borrar_Proyecto.Designer.cs">
+      <DependentUpon>Borrar_Proyecto.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\RH\Proyectos_RH.cs">
       <SubType>Form</SubType>
@@ -140,6 +159,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RecursosHumanos.resx">
       <DependentUpon>RecursosHumanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RH\Actualizar_Proyecto.resx">
+      <DependentUpon>Actualizar_Proyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RH\Agregar_Proyecto.resx">
+      <DependentUpon>Agregar_Proyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RH\Borrar_Proyecto.resx">
+      <DependentUpon>Borrar_Proyecto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RH\Proyectos_RH.resx">
       <DependentUpon>Proyectos_RH.cs</DependentUpon>

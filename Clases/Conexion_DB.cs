@@ -25,7 +25,7 @@ namespace Nestle.Clases
             {
                 conn.ConnectionString = cadenaconn;
                 conn.Open();
-                //MessageBox.Show("Se establecio la coneccion con la DB");
+                //MessageBox.Show("Se establecio la conexion con la DB");
             }
             catch (MySqlException e)
             {
