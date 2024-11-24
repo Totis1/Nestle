@@ -12,7 +12,7 @@ namespace Nestle.Clases
     {
         public int Login(TextBox Correo, TextBox Pass)
         {
-            string query = "select * from empleados where email = '" + Correo.Text + "' and contraseña = '" + Pass.Text + "' "; 
+            string query = "select * from Empleados where email = '" + Correo.Text + "' and contraseña = '" + Pass.Text + "' "; 
             Conexion_DB objConn = new Conexion_DB();
             MySqlCommand command = new MySqlCommand(query,objConn.establecerConn());
             MySqlDataReader reader = command.ExecuteReader();

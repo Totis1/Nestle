@@ -16,5 +16,17 @@ namespace Nestle.Formularios
         {
             InitializeComponent();
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            Formularios.RH.Usuarios_RH Usuarios = new RH.Usuarios_RH();
+            Usuarios.ShowDialog();
+        }
+
+        private void btnProyectos_Click(object sender, EventArgs e)
+        {
+            Formularios.RH.Proyectos_RH Proyectos = new RH.Proyectos_RH();
+            Proyectos.ShowDialog();
+        }
     }
 }
