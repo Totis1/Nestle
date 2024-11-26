@@ -9,19 +9,19 @@ using System.Windows.Forms;
 
 namespace Nestle.Clases
 {
-    internal class Class_Proyectos
+    internal class Class_Empleados
     {
-        public void MostrarProyectos(DataGridView tablaProyectos)
+        public void MostrarEmpleados(DataGridView tablaEmpleados)
         {
             try
             {
                 Conexion_DB objConn = new Conexion_DB();
-                string query = "select * from proyectos";
-                tablaProyectos.DataSource = null;
+                string query = "select * from empleados";
+                tablaEmpleados.DataSource = null;
                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, objConn.establecerConn());
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
-                tablaProyectos.DataSource = dt;
+                tablaEmpleados.DataSource = dt;
                 objConn.cerrarConn();
             }
             catch (Exception ex)
@@ -35,7 +35,7 @@ namespace Nestle.Clases
             {
                 Conexion_DB objConn = new Conexion_DB();
                 string query = "select * from departamentos";
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query,objConn.establecerConn());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, objConn.establecerConn());
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 Departamento.DataSource = dt;
@@ -48,18 +48,18 @@ namespace Nestle.Clases
                 MessageBox.Show("Error cbbox: ", ex.ToString());
             }
         }
-        public void MostarProyectos_V2(ComboBox Proyectos)
+        public void MostarCargos(ComboBox Cargos)
         {
             try
             {
                 Conexion_DB objConn = new Conexion_DB();
-                string query = "select * from proyectos";
+                string query = "select * from cargos";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, objConn.establecerConn());
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
-                Proyectos.DataSource = dt;
-                Proyectos.DisplayMember = "nombre_proyecto";
-                Proyectos.ValueMember = "id_proyecto";
+                Cargos.DataSource = dt;
+                Cargos.DisplayMember = "nombre_cargo";
+                Cargos.ValueMember = "id_cargo";
                 objConn.cerrarConn();
             }
             catch (Exception ex)
@@ -67,18 +67,34 @@ namespace Nestle.Clases
                 MessageBox.Show("Error cbbox: ", ex.ToString());
             }
         }
-        public void InsertarProyecto(TextBox Nombre, TextBox Descripcion, DateTimePicker FechaInicio, DateTimePicker FechaFin, ComboBox IdDepartamento)
+        public void MostrarEmpleadosV2(ComboBox Empleados)
         {
-            int indiceCbox = Convert.ToInt32(IdDepartamento.SelectedValue);
-            DateTime fechaInicio = FechaInicio.Value;
-            DateTime fechaFin = FechaFin.Value;
-            string fechIni = fechaInicio.ToString("yyyy-MM-dd");
-            string fechFin = fechaFin.ToString("yyyy-MM-dd");
             try
             {
                 Conexion_DB objConn = new Conexion_DB();
-                string query = "insert into Proyectos (nombre_proyecto, descripcion, fecha_inicio, fecha_fin, id_departamento) " +
-                    "values ('"+ Nombre.Text + "','" + Descripcion.Text + "','" + fechIni + "','" + fechFin + "','" + indiceCbox + "');";
+                string query = "select * from empleados";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, objConn.establecerConn());
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                Empleados.DataSource = dt;
+                Empleados.DisplayMember = "email";
+                Empleados.ValueMember = "id_empleado";
+                objConn.cerrarConn();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error cbbox: ", ex.ToString());
+            }
+        }
+        public void InsertarEmpleados(TextBox Nombres, TextBox Apellidos, TextBox Email, TextBox Contraseña, TextBox Telefono, ComboBox ID_departamento, ComboBox ID_cargo)
+        {
+            int indiceCbox1 = Convert.ToInt32(ID_departamento.SelectedValue);
+            int indiceCbox2 = Convert.ToInt32(ID_cargo.SelectedValue);
+            try
+            {
+                Conexion_DB objConn = new Conexion_DB();
+                string query = "insert into empleados (nombre_empleado, apellido_empleado, email, contraseña, telefono, id_departamento, id_cargo) " +
+                    "values ('" + Nombres.Text + "','" + Apellidos.Text + "','" + Email.Text + "','" + Contraseña.Text + "','" + Telefono.Text + "','" + indiceCbox1 + "','" + indiceCbox2 + "');";
                 MySqlCommand cmd = new MySqlCommand(query, objConn.establecerConn());
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -92,35 +108,34 @@ namespace Nestle.Clases
                 MessageBox.Show("Error : " + ex.ToString());
             }
         }
-        public void SeleccionarProyecto(DataGridView tablaProyectos, TextBox ID, TextBox Nombre, TextBox Descripcion, DateTimePicker FechaInicio, DateTimePicker FechaFin, ComboBox IdDepartamento)
+        public void SeleccionarEmpleado(DataGridView tablaEmpleados, TextBox ID, TextBox Nombres, TextBox Apellidos, TextBox Email, TextBox Contraseña, TextBox Telefono, ComboBox ID_departamento, ComboBox ID_cargo)
         {
             try
             {
-                ID.Text = tablaProyectos.CurrentRow.Cells[0].Value.ToString();
-                Nombre.Text = tablaProyectos.CurrentRow.Cells[1].Value.ToString();
-                Descripcion.Text = tablaProyectos.CurrentRow.Cells[2].Value.ToString();
-                FechaInicio.Value = Convert.ToDateTime(tablaProyectos.CurrentRow.Cells[3].Value.ToString());
-                FechaFin.Value = Convert.ToDateTime(tablaProyectos.CurrentRow.Cells[4].Value.ToString());
-                IdDepartamento.Text = tablaProyectos.CurrentRow.Cells[5].Value.ToString();
+                ID.Text = tablaEmpleados.CurrentRow.Cells[0].Value.ToString();
+                ID_cargo.Text = tablaEmpleados.CurrentRow.Cells[1].Value.ToString();
+                Nombres.Text = tablaEmpleados.CurrentRow.Cells[2].Value.ToString();
+                Apellidos.Text = tablaEmpleados.CurrentRow.Cells[3].Value.ToString();
+                Email.Text = tablaEmpleados.CurrentRow.Cells[4].Value.ToString();
+                Contraseña.Text = tablaEmpleados.CurrentRow.Cells[5].Value.ToString();
+                Telefono.Text = tablaEmpleados.CurrentRow.Cells[6].Value.ToString();
+                ID_departamento.Text = tablaEmpleados.CurrentRow.Cells[7].Value.ToString();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo seleccionar, error:" + ex.ToString());
             }
         }
-        public void ActualizarProyecto(TextBox ID,TextBox Nombre ,TextBox Descripcion, DateTimePicker FechaInicio, DateTimePicker FechaFin, ComboBox IdDepartamento)
+        public void ActualizarEmpleado(TextBox ID, TextBox Nombres, TextBox Apellidos, TextBox Email, TextBox Contraseña, TextBox Telefono, ComboBox ID_departamento, ComboBox ID_cargo)
         {
-            int indiceCbox = Convert.ToInt32(IdDepartamento.SelectedValue);
-            DateTime fechaInicio = FechaInicio.Value;
-            DateTime fechaFin = FechaFin.Value;
-            string fechIni = fechaInicio.ToString("yyyy-MM-dd");
-            string fechFin = fechaFin.ToString("yyyy-MM-dd");
+            int indiceCbox1 = Convert.ToInt32(ID_departamento.SelectedValue);
+            int indiceCbox2 = Convert.ToInt32(ID_cargo.SelectedValue);
             try
             {
                 Conexion_DB objConn = new Conexion_DB();
-                string query = "update Proyectos set nombre_proyecto='" + Nombre.Text + "', descripcion='" + Descripcion.Text + "', fecha_inicio='" + fechIni +
-                    "', fecha_fin='" + fechFin + "', id_departamento='" + indiceCbox +
-                    "'where id_proyecto ='" + ID.Text + "';";
+                string query = "update Empleados set id_cargo='" + indiceCbox2 + "', nombre_empleado='" + Nombres.Text + "', apellido_empleado='" + Apellidos.Text + "', email='" + Email.Text +
+                    "', contraseña='" + Contraseña.Text + "', telefono='" + Telefono.Text + "', id_departamento='" + indiceCbox1 +
+                    "'where id_empleado ='" + ID.Text + "';";
                 MySqlCommand cmd = new MySqlCommand(query, objConn.establecerConn());
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -134,13 +149,13 @@ namespace Nestle.Clases
                 MessageBox.Show("Error al actualizar registro: " + ex.ToString());
             }
         }
-        public void EliminarProyecto(ComboBox Eliminar)
+        public void EliminarEmpleado(ComboBox Eliminar)
         {
             int indiceCbox = Convert.ToInt32(Eliminar.SelectedValue);
             try
             {
                 Conexion_DB objConn = new Conexion_DB();
-                string query = "delete from Proyectos where id_proyecto ='" + indiceCbox + "';";
+                string query = "delete from Empleados where id_empleado ='" + indiceCbox + "';";
                 MySqlCommand cmd = new MySqlCommand(query, objConn.establecerConn());
                 MySqlDataReader reader = cmd.ExecuteReader();
                 //MessageBox.Show("Se guardo el registro");

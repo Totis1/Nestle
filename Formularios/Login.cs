@@ -27,11 +27,33 @@ namespace Nestle.Formularios
             switch (decision)
             {
                 case 1:
+                    Formularios.Produccion frmProduccion = new Formularios.Produccion();
+                    this.Hide();
+                    frmProduccion.ShowDialog();
+                    this.Close();
                     break;
                 case 2:
                     Formularios.RecursosHumanos frmRH = new Formularios.RecursosHumanos();
                     this.Hide();
                     frmRH.ShowDialog();
+                    this.Close();
+                    break;
+                case 3:
+                    Formularios.Ventas frmVentas = new Formularios.Ventas();
+                    this.Hide();
+                    frmVentas.ShowDialog();
+                    this.Close();
+                    break;
+                case 4:
+                    Formularios.Finanzas frmFinanzas = new Formularios.Finanzas();
+                    this.Hide();
+                    frmFinanzas.ShowDialog();
+                    this.Close();
+                    break;
+                case 5:
+                    Formularios.Logistica frmLogistica = new Formularios.Logistica();
+                    this.Hide();
+                    frmLogistica.ShowDialog();
                     this.Close();
                     break;
                 default:

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnRegistrar = new System.Windows.Forms.Button();
             this.CBoxIDdepartamento = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.DtpFechaFin = new System.Windows.Forms.DateTimePicker();
@@ -39,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtBoxNProyecto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnRegistrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,17 @@
             this.groupBox1.Size = new System.Drawing.Size(758, 491);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // BtnRegistrar
+            // 
+            this.BtnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistrar.Location = new System.Drawing.Point(603, 436);
+            this.BtnRegistrar.Name = "BtnRegistrar";
+            this.BtnRegistrar.Size = new System.Drawing.Size(130, 35);
+            this.BtnRegistrar.TabIndex = 10;
+            this.BtnRegistrar.Text = "Registrar";
+            this.BtnRegistrar.UseVisualStyleBackColor = true;
+            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
             // 
             // CBoxIDdepartamento
             // 
@@ -154,17 +165,6 @@
             this.label1.Size = new System.Drawing.Size(219, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del Proyecto:";
-            // 
-            // BtnRegistrar
-            // 
-            this.BtnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegistrar.Location = new System.Drawing.Point(603, 436);
-            this.BtnRegistrar.Name = "BtnRegistrar";
-            this.BtnRegistrar.Size = new System.Drawing.Size(130, 35);
-            this.BtnRegistrar.TabIndex = 10;
-            this.BtnRegistrar.Text = "Registrar";
-            this.BtnRegistrar.UseVisualStyleBackColor = true;
-            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
             // 
             // Agregar_Proyecto
             // 

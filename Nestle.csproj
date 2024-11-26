@@ -98,8 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Class_Clientes.cs" />
+    <Compile Include="Clases\Class_Empleados.cs" />
     <Compile Include="Clases\Class_Login.cs" />
+    <Compile Include="Clases\Class_Productos.cs" />
     <Compile Include="Clases\Class_Proyectos.cs" />
+    <Compile Include="Clases\Class_Ventas.cs" />
     <Compile Include="Clases\Conexion_DB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -107,11 +111,47 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Finanzas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Finanzas.Designer.cs">
+      <DependentUpon>Finanzas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica.Designer.cs">
+      <DependentUpon>Logistica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Produccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produccion.Designer.cs">
+      <DependentUpon>Produccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Productos\Actualizar_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Productos\Actualizar_Producto.Designer.cs">
+      <DependentUpon>Actualizar_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Productos\Agregar_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Productos\Agregar_Producto.Designer.cs">
+      <DependentUpon>Agregar_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Productos\Borrar_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Productos\Borrar_Producto.Designer.cs">
+      <DependentUpon>Borrar_Producto.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\RecursosHumanos.cs">
       <SubType>Form</SubType>
@@ -119,17 +159,35 @@
     <Compile Include="Formularios\RecursosHumanos.Designer.cs">
       <DependentUpon>RecursosHumanos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\RH\Actualizar_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RH\Actualizar_Empleados.Designer.cs">
+      <DependentUpon>Actualizar_Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\RH\Actualizar_Proyecto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\RH\Actualizar_Proyecto.Designer.cs">
       <DependentUpon>Actualizar_Proyecto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\RH\Agregar_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RH\Agregar_Empleado.Designer.cs">
+      <DependentUpon>Agregar_Empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\RH\Agregar_Proyecto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\RH\Agregar_Proyecto.Designer.cs">
       <DependentUpon>Agregar_Proyecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\RH\Borrar_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RH\Borrar_Empleado.Designer.cs">
+      <DependentUpon>Borrar_Empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\RH\Borrar_Proyecto.cs">
       <SubType>Form</SubType>
@@ -149,22 +207,67 @@
     <Compile Include="Formularios\RH\Usuarios_RH.Designer.cs">
       <DependentUpon>Usuarios_RH.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Finanzas.resx">
+      <DependentUpon>Finanzas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica.resx">
+      <DependentUpon>Logistica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Produccion.resx">
+      <DependentUpon>Produccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Productos\Actualizar_Producto.resx">
+      <DependentUpon>Actualizar_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Productos\Agregar_Producto.resx">
+      <DependentUpon>Agregar_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Productos\Borrar_Producto.resx">
+      <DependentUpon>Borrar_Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RecursosHumanos.resx">
       <DependentUpon>RecursosHumanos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RH\Actualizar_Empleados.resx">
+      <DependentUpon>Actualizar_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RH\Actualizar_Proyecto.resx">
       <DependentUpon>Actualizar_Proyecto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RH\Agregar_Empleado.resx">
+      <DependentUpon>Agregar_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RH\Agregar_Proyecto.resx">
       <DependentUpon>Agregar_Proyecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RH\Borrar_Empleado.resx">
+      <DependentUpon>Borrar_Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RH\Borrar_Proyecto.resx">
       <DependentUpon>Borrar_Proyecto.cs</DependentUpon>
@@ -174,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RH\Usuarios_RH.resx">
       <DependentUpon>Usuarios_RH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

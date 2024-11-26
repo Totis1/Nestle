@@ -29,7 +29,7 @@ namespace Nestle.Formularios.RH
 
         private void dgvProyectos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            Formularios.RH.Actualizar_Proyecto frmactualizar = new Actualizar_Proyecto();
+            Formularios.RH.Actualizar_Proyecto frmactualizar = new RH.Actualizar_Proyecto();
             Clases.Class_Proyectos objProyectos = new Clases.Class_Proyectos();
             objProyectos.SeleccionarProyecto(dgvProyectos,frmactualizar.TxtBoxID,frmactualizar.TxtBoxNProyecto,frmactualizar.TxtBoxDescripcion,frmactualizar.DtpFechaInicio,frmactualizar.DtpFechaFin,frmactualizar.CBoxIDdepartamento);
             frmactualizar.ShowDialog();
