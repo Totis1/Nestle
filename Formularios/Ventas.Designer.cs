@@ -1,6 +1,6 @@
 ﻿namespace Nestle.Formularios
 {
-    partial class Ventas
+    partial class Venta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Venta));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnVentas = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -123,7 +123,7 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Bienvenido";
             // 
-            // Ventas
+            // Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,7 +133,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Ventas";
+            this.Name = "Venta";
             this.Text = "Ventas";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

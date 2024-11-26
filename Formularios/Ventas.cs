@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Nestle.Formularios
 {
-    public partial class Ventas : Form
+    public partial class Venta : Form
     {
-        public Ventas()
+        public Venta()
         {
             InitializeComponent();
         }

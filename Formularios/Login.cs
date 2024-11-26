@@ -39,7 +39,7 @@ namespace Nestle.Formularios
                     this.Close();
                     break;
                 case 3:
-                    Formularios.Ventas frmVentas = new Formularios.Ventas();
+                    Formularios.Venta frmVentas = new Formularios.Venta();
                     this.Hide();
                     frmVentas.ShowDialog();
                     this.Close();
