@@ -70,7 +70,7 @@ namespace Nestle.Clases
                 MessageBox.Show("Error : " + ex.ToString());
             }
         }
-        public void SeleccionarProducto(DataGridView tablaClientes, TextBox ID, TextBox Nombre, DateTimePicker Fecha_Registro, ComboBox Estado, TextBox Correo, TextBox Telefono)
+        public void SeleccionarCliente(DataGridView tablaClientes, TextBox ID, TextBox Nombre, DateTimePicker Fecha_Registro, ComboBox Estado, TextBox Correo, TextBox Telefono)
         {
             try
             {
@@ -95,7 +95,7 @@ namespace Nestle.Clases
                 Conexion_DB objConn = new Conexion_DB();
                 string query = "update Clientes set nombre_cliente='" + Nombre.Text + "', fecha_registro='" + fechRegis + "', estado='" + Estado.Text + "', email='" + Correo.Text +
                     "', telefono='" + Telefono.Text +
-                    "' where id_producto ='" + ID.Text + "';";
+                    "' where id_cliente ='" + ID.Text + "';";
                 MySqlCommand cmd = new MySqlCommand(query, objConn.establecerConn());
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())

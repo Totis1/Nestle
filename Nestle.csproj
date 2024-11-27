@@ -99,7 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Class_Clientes.cs" />
+    <Compile Include="Clases\Class_Compras.cs" />
     <Compile Include="Clases\Class_Empleados.cs" />
+    <Compile Include="Clases\Class_Inventario.cs" />
     <Compile Include="Clases\Class_Login.cs" />
     <Compile Include="Clases\Class_Productos.cs" />
     <Compile Include="Clases\Class_Proyectos.cs" />
@@ -110,6 +112,24 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\Actualizar_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\Actualizar_Compra.Designer.cs">
+      <DependentUpon>Actualizar_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\Agregar_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\Agregar_Compra.Designer.cs">
+      <DependentUpon>Agregar_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Compras\Borrar_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Compras\Borrar_Compra.Designer.cs">
+      <DependentUpon>Borrar_Compra.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Finanzas.cs">
       <SubType>Form</SubType>
@@ -123,11 +143,29 @@
     <Compile Include="Formularios\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Logistica.cs">
+    <Compile Include="Formularios\Logisticas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Logistica.Designer.cs">
-      <DependentUpon>Logistica.cs</DependentUpon>
+    <Compile Include="Formularios\Logisticas.Designer.cs">
+      <DependentUpon>Logisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Actualizar_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Actualizar_Inventario.Designer.cs">
+      <DependentUpon>Actualizar_Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Agregar_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Agregar_Inventario.Designer.cs">
+      <DependentUpon>Agregar_Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Borrar_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logistica\Borrar_Inventario.Designer.cs">
+      <DependentUpon>Borrar_Inventario.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Produccion.cs">
       <SubType>Form</SubType>
@@ -207,11 +245,47 @@
     <Compile Include="Formularios\RH\Usuarios_RH.Designer.cs">
       <DependentUpon>Usuarios_RH.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Ventas.cs">
+    <Compile Include="Formularios\Venta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Ventas.Designer.cs">
-      <DependentUpon>Ventas.cs</DependentUpon>
+    <Compile Include="Formularios\Venta.Designer.cs">
+      <DependentUpon>Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Actualizar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Actualizar_Cliente.Designer.cs">
+      <DependentUpon>Actualizar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Actualizar_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Actualizar_Venta.Designer.cs">
+      <DependentUpon>Actualizar_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Agregar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Agregar_Cliente.Designer.cs">
+      <DependentUpon>Agregar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Agregar_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Agregar_Venta.Designer.cs">
+      <DependentUpon>Agregar_Venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Borrar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Borrar_Cliente.Designer.cs">
+      <DependentUpon>Borrar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Borrar_Venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ventas\Borrar_Venta.Designer.cs">
+      <DependentUpon>Borrar_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Ventas\Clientes.cs">
       <SubType>Form</SubType>
@@ -230,14 +304,32 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\Actualizar_Compra.resx">
+      <DependentUpon>Actualizar_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\Agregar_Compra.resx">
+      <DependentUpon>Agregar_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Compras\Borrar_Compra.resx">
+      <DependentUpon>Borrar_Compra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Finanzas.resx">
       <DependentUpon>Finanzas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Logistica.resx">
-      <DependentUpon>Logistica.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Logisticas.resx">
+      <DependentUpon>Logisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica\Actualizar_Inventario.resx">
+      <DependentUpon>Actualizar_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica\Agregar_Inventario.resx">
+      <DependentUpon>Agregar_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logistica\Borrar_Inventario.resx">
+      <DependentUpon>Borrar_Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Produccion.resx">
       <DependentUpon>Produccion.cs</DependentUpon>
@@ -278,7 +370,31 @@
     <EmbeddedResource Include="Formularios\RH\Usuarios_RH.resx">
       <DependentUpon>Usuarios_RH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Ventas.resx">
+    <EmbeddedResource Include="Formularios\Venta.resx">
+      <DependentUpon>Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas\Actualizar_Cliente.resx">
+      <DependentUpon>Actualizar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas\Actualizar_Venta.resx">
+      <DependentUpon>Actualizar_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas\Agregar_Cliente.resx">
+      <DependentUpon>Agregar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas\Agregar_Venta.resx">
+      <DependentUpon>Agregar_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas\Borrar_Cliente.resx">
+      <DependentUpon>Borrar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas\Borrar_Venta.resx">
+      <DependentUpon>Borrar_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ventas\Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

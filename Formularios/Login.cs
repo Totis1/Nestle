@@ -51,7 +51,7 @@ namespace Nestle.Formularios
                     this.Close();
                     break;
                 case 5:
-                    Formularios.Logistica frmLogistica = new Formularios.Logistica();
+                    Formularios.Logisticas frmLogistica = new Formularios.Logisticas();
                     this.Hide();
                     frmLogistica.ShowDialog();
                     this.Close();
