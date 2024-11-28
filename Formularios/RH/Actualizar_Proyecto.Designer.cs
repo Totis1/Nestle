@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TxtBoxID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.CBoxIDdepartamento = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,8 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtBoxNProyecto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TxtBoxID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,25 @@
             this.groupBox1.Size = new System.Drawing.Size(758, 545);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // TxtBoxID
+            // 
+            this.TxtBoxID.Enabled = false;
+            this.TxtBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBoxID.Location = new System.Drawing.Point(604, 10);
+            this.TxtBoxID.Name = "TxtBoxID";
+            this.TxtBoxID.Size = new System.Drawing.Size(130, 31);
+            this.TxtBoxID.TabIndex = 12;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(434, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(164, 25);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "ID del Proyecto:";
             // 
             // BtnActualizar
             // 
@@ -170,25 +189,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del Proyecto:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(434, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 25);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "ID del Proyecto:";
-            // 
-            // TxtBoxID
-            // 
-            this.TxtBoxID.Enabled = false;
-            this.TxtBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBoxID.Location = new System.Drawing.Point(604, 10);
-            this.TxtBoxID.Name = "TxtBoxID";
-            this.TxtBoxID.Size = new System.Drawing.Size(130, 31);
-            this.TxtBoxID.TabIndex = 12;
-            // 
             // Actualizar_Proyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +196,7 @@
             this.ClientSize = new System.Drawing.Size(782, 569);
             this.Controls.Add(this.groupBox1);
             this.Name = "Actualizar_Proyecto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actualizar_Proyecto";
             this.Load += new System.EventHandler(this.Actualizar_Proyecto_Load);
             this.groupBox1.ResumeLayout(false);

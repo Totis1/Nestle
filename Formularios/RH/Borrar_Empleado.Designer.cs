@@ -90,6 +90,7 @@
             this.Controls.Add(this.CBoxEmpleado);
             this.Controls.Add(this.label1);
             this.Name = "Borrar_Empleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Borrar_Empleado";
             this.Load += new System.EventHandler(this.Borrar_Empleado_Load);
             this.ResumeLayout(false);

@@ -255,6 +255,7 @@
             this.ClientSize = new System.Drawing.Size(1111, 396);
             this.Controls.Add(this.groupBox1);
             this.Name = "Actualizar_Empleados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actualizar_Empleados";
             this.Load += new System.EventHandler(this.Actualizar_Empleados_Load);
             this.groupBox1.ResumeLayout(false);
